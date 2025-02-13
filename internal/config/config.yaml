@@ -1,0 +1,16 @@
+input_file_path: "testdata/input.txt"
+output_file_path: "output.txt"
+filter:
+  field: "bizid"
+  condition: ">25"
+fill:
+  field: "os_type"
+  value: "linux"
+aggregator:
+  field: "__value__"
+  group_by_field: "zone"
+  aggregations:
+    sum: "sum"
+    count: "count"
+    min: "min"
+    max: "max"

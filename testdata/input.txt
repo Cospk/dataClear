@@ -1,0 +1,2 @@
+{"zone": "gz", "bizid": "28", "env": "prod", "__value__": 1024}
+{"zone": "sz", "bizid": "26", "env": "dev", "__value__": 2048}
