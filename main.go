@@ -24,11 +24,7 @@ func main() {
 
 	// 初始化 Pipeline
 	pipeline := pipeline.NewPipeline()
-	pipeline.AddProcessor(processor.NewFilter(cfg.FilterConfig.Field, func(value interface{}) bool {
-		// 在这里添加你的过滤条件
-
-		return value != nil // 示例：只保留非空值
-	}))
+	pipeline.AddProcessor(processor.NewFilter(cfg.FilterConfig))
 	pipeline.AddProcessor(processor.NewFill(cfg.FillConfig))
 	aggregator := processor.NewAggregator(cfg.AggregatorConfig)
 	pipeline.AddProcessor(aggregator)
